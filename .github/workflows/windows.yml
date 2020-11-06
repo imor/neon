@@ -17,8 +17,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [15.x]
-        rust-toolchain: [stable]
+        node-version: [10.x, 12.x, 14.x, 15.x]
+        rust-toolchain: [stable, beta, nightly]
 
     steps:
     - uses: actions/checkout@v2
