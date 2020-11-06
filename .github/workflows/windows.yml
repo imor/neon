@@ -5,6 +5,7 @@ on:
     # Prevent duplicate runs of this workflow on our own internal PRs.
     branches:
       - main
+      - node-15
   pull_request:
     branches:
       - main
