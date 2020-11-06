@@ -198,6 +198,7 @@ mod build {
                 .join(configuration)
                 .join("obj")
                 .join("neon")
+                .join("src")
                 .join("neon.obj")
         };
 
