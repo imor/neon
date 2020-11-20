@@ -31,6 +31,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Use npm v6
+      if: ${{ matrix.node-version == '15.x' }}
+      run: npm install -g npm@6
     - name: Install libclang
       uses: KyleMayes/install-llvm-action@01144dc
       with:
