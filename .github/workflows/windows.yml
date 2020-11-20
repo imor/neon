@@ -41,6 +41,6 @@ jobs:
     #   run: npm install -g node-gyp@latest
     - run: npm config set msvs_version 2019
     - name: run cargo test
-      run: cargo test --release
+      run: cargo test --release -vv
       env:
         LIBCLANG_PATH: ${{ runner.temp }}/llvm/bin
