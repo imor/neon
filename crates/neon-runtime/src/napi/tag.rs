@@ -65,3 +65,9 @@ pub unsafe extern "C" fn is_arraybuffer(env: Env, val: Local) -> bool {
     assert_eq!(napi::napi_is_arraybuffer(env, val, &mut result as *mut _), napi::napi_status::napi_ok);
     result
 }
+
+pub unsafe extern "C" fn is_date(env: Env, val: Local) -> bool {
+    let mut result = false;
+    assert_eq!(napi::napi_is_date(env, val, &mut result as *mut _), napi::napi_status::napi_ok);
+    result
+}
